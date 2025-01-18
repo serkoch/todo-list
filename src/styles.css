@@ -1,3 +1,4 @@
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 header {
@@ -38,12 +40,19 @@ header button:hover {
   color: #10a37f;
 }
 
+/* Sidebar Styles */
 main nav {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Initially hidden off-screen */
+  width: 250px;
+  height: 100%;
   background-color: #343541;
   padding: 1rem;
-  margin: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.2);
+  border-left: 1px solid #525357;
+  transform: translateX(0);
+  transition: right 0.3s ease; /* Smooth slide-in and slide-out effect */
 }
 
 nav ul {
@@ -74,6 +83,11 @@ nav ul li button:hover {
 nav ul li ul {
   margin-left: 1rem;
   margin-top: 0.5rem;
+}
+
+/* Active Sidebar (Visible) */
+main nav.active {
+  right: 0; /* Slide in */
 }
 
 footer {
