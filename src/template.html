@@ -3,18 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
     <title>ToDo List</title>
   </head>
   <body>
     <header>
       <h1>ToDo List</h1>
-      <button onclick=style>≡</button>
+      <button id="menu-toggle">≡</button>
     </header>
     <main>
-      <nav>
+      <nav id="sidebar">
         <ul>
-          <li><button>&times;</button></li>
+          <li><button class="menu-close">&times;</button></li>
           <li><button>Home</button></li>
           <li><button>Today</button></li>
           <li><button>Week</button></li>
