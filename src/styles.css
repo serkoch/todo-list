@@ -22,6 +22,7 @@ header {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #525357;
+  height: 60px;
 }
 
 header h1 {
@@ -43,16 +44,17 @@ header button:hover {
 /* Sidebar Styles */
 main nav {
   position: fixed;
-  top: 0;
+  top: 60px;
+  bottom: 60px;
   right: -250px; /* Initially hidden off-screen */
   width: 250px;
-  height: 100%;
   background-color: #343541;
   padding: 1rem;
   box-shadow: -4px 0 6px rgba(0, 0, 0, 0.2);
   border-left: 1px solid #525357;
   transform: translateX(0);
   transition: right 0.3s ease; /* Smooth slide-in and slide-out effect */
+  overflow-y: auto;
 }
 
 nav ul {
@@ -97,6 +99,7 @@ footer {
   text-align: center;
   padding: 1rem;
   border-top: 1px solid #525357;
+  height: 60px;
 }
 
 footer a {
